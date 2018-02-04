@@ -1,0 +1,657 @@
+/*
+Theme Name: Salient Child Theme
+Theme URI: http: //mysite.com/
+Description: This is a custom child theme for Salient
+Author: My Name
+Author URI: http: //mysite.com/
+Template: salient
+Version: 0.1
+*/
+/*Cargar Andralis*/
+@font-face {
+    font-family: 'AndralisNDOsF';
+    src: url('../../../fuentes/AndralisNDOsF.eot');
+    src: url('../../../fuentes/AndralisNDOsF.woff') format('woff'), url('../../../fuentes/AndralisNDOsF.ttf') format('truetype'), url('../../../fuentes/AndralisNDOsF.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AndralisNDOsF-Italic';
+    src: url('../../../fuentes/AndralisNDOsF-Italic.eot');
+    src: url('../../../fuentes/AndralisNDOsF-Italic.woff') format('woff'), url('../../../fuentes/AndralisNDOsF-Italic.ttf') format('truetype'), url('../../../fuentes/AndralisNDOsF-Italic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AndralisNDOsF-BoldItalic';
+    src: url('../../../fuentes/AndralisNDOsF-BoldItalic.eot');
+    src: url('../../../fuentes/AndralisNDOsF-BoldItalic.woff') format('woff'), url('../../../fuentes/AndralisNDOsF-BoldItalic.ttf') format('truetype'), url('../../../fuentes/AndralisNDOsF-BoldItalic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Cargar Pressura*/
+@font-face {
+    font-family: 'GT-Pressura-Regular';
+    src: url('../../../fuentes/GT-Pressura-Regular.eot');
+    src: url('../../../fuentes/GT-Pressura-Regular.woff') format('woff'), url('../../../fuentes/GT-Pressura-Regular.ttf') format('truetype'), url('../../../fuentes/GT-Pressura-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT-Pressura-Bold';
+    src: url('../../../fuentes/GT-Pressura-Bold.eot');
+    src: url('../../../fuentes/GT-Pressura-Bold.woff') format('woff'), url('../../../fuentes/GT-Pressura-Bold.ttf') format('truetype'), url('../../../fuentes/GT-Pressura-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Estilos tipograficos*/
+html, body {
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-size: 24px;
+    line-height: 1.3333333;
+    letter-spacing: 0.01em;
+}
+p {
+   -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased; 
+}
+html strong, body strong {
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    font-size: 24px;
+    line-height: 1.3333333;
+    letter-spacing: 0.01em;
+}
+/*==============
+COLOR
+==============*/
+.tu-verdad {
+    color: #1a469d;
+}
+
+.tu-mentira {
+    color: #91524a;
+}
+
+/*==============
+FOOTER
+==============
+*/
+#header-secondary-outer {
+    top: initial!important;
+    bottom: 0;
+}
+
+#header-outer {
+    top: 0!important;
+}
+
+.admin-bar #header-outer {
+    top: 31px!important;
+}
+
+#nectar_fullscreen_rows {
+    margin-top: -31px
+}
+
+html #nectar_fullscreen_rows > .wpb_row .full-page-inner-wrap {
+    background-color: #f3f3f3;
+}
+
+#header-secondary-outer .sf-menu {
+    float: initial;
+}
+
+body[data-header-color="custom"]:not(.material) #header-secondary-outer nav >ul >li:last-child, body[data-header-color="custom"]:not(.material) #header-secondary-outer nav >ul >li >a {
+    border: none;
+}
+
+#header-secondary-outer ul {
+    height: 56px;
+}
+
+#header-secondary-outer .sf-menu a {
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    padding-left: 91px!important;
+    margin-left: 23px;
+}
+
+#header-secondary-outer .sf-menu a::before {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 1px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+html #header-secondary-outer #social i {
+    font-size: 18px!important;
+}
+
+html #header-secondary-outer #social a:hover i {
+    transform: scale(1.2);
+}
+
+/*==============
+HEADER
+==============*/
+header#top nav >ul >li >a {
+    font-size: 14px;
+    margin-left: 64px!important;
+    margin-right: 0;
+}
+
+header#top nav >ul >li {
+    float: left;
+}
+
+#menu-item-45 , #menu-item-46 , #menu-item-47 {
+    float: right!important;
+}
+
+#header-outer .row .col.span_9 {
+    width: calc(100% - 120px);
+}
+
+#header-outer .row .col.span_9 .sf-menu {
+    width: 100%;
+}
+
+#menu-item-45 a, #menu-item-46 a, #menu-item-47 a {
+    width: 159px;
+    color: transparent!important;
+    font-size: 0!important;
+}
+
+#menu-item-45 a:after, #menu-item-46 a:after, #menu-item-47 a:after {
+    display: none!important;
+}
+
+#menu-item-45 a {
+    background: url(../../../wp-content/uploads/2018/01/btn-colaborar.png) no-repeat center;
+}
+
+#menu-item-45 a:hover {
+    background: url(../../../wp-content/uploads/2018/01/btn-colaborar-h.png) no-repeat center;
+}
+
+#menu-item-46 a {
+    background: url(../../../wp-content/uploads/2018/01/btn-inscripciones.png) no-repeat center;
+}
+
+#menu-item-46 a:hover {
+    background: url(../../../wp-content/uploads/2018/01/btn-inscripciones-h.png) no-repeat center;
+}
+
+#menu-item-47 a {
+    background: url(../../../wp-content/uploads/2018/01/btn-fisuras.png) no-repeat center;
+}
+
+#menu-item-47 a:hover {
+    background: url(../../../wp-content/uploads/2018/01/btn-fisuras-h.png) no-repeat center;
+}
+
+/*==============
+HOME
+==============*/
+.home .tu-verdad, .home .tu-mentira {
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.home .tu-verdad h2 {
+    font-size: 177px;
+    line-height: 1.18644;
+    text-transform: uppercase;
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-weight: bold;
+    color: #1a469d;
+    position: relative;
+}
+
+.home .tu-mentira h2 {
+    font-size: 194px;
+    line-height: 211px;
+    text-transform: uppercase;
+    font-family: 'AndralisNDOsF', serif;
+    font-weight: bold;
+    color: #91524a;
+    position: relative;
+}
+
+.home .tu-silaba {
+    display: block;
+}
+
+.home .tu-verdad em, .home .tu-mentira em {
+    position: absolute;
+    font-style: normal;
+    width: 100%;
+    left: 0;
+    font-weight: normal;
+    line-height: 211px;
+}
+
+.home .tu-verdad em {
+    font-size: 18px;
+    top: -4em;
+}
+
+.home .tu-mentira em {
+    font-family: 'Andralis ND OsF', serif;
+    font-size: 19px;
+    top: -4.05em;
+}
+
+.home .tu-verdad .nectar_icon_wrap {
+    margin: 20px;
+}
+
+.home .tu-mentira .nectar_icon_wrap {
+    margin: 15px;
+}
+
+.home .tu-silaba {
+    position: relative;
+}
+
+.home .tu-silaba:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 0;
+    background: gray;
+    left: 50%
+}
+
+.home .tu-verdad .tu-silaba:before {
+    background: #1a469d;
+    top: 54%;
+    max-width: 280px;
+    margin-left: -140px;
+}
+
+.home .tu-mentira .tu-silaba:before {
+    background: #91524a;
+    top: 86%;
+    max-width: 425px;
+    margin-left: -212px;
+}
+
+a.column-link:hover + .vc_column-inner .tu-silaba:before {
+    width: 100%;
+}
+
+.home h2 .tu-silaba:first-child:before {
+    -moz-transition: width 800ms ease;
+    -webkit-transition: width 800ms ease;
+    transition: width 800ms ease;
+}
+
+.home h2 .tu-silaba:last-child:before {
+    -moz-transition: width 800ms ease 200ms;
+    -webkit-transition: width 800ms ease 200ms;
+    transition: width 800ms ease 200ms;
+}
+/*==============
+TEXTOS
+==============*/
+.tu-verdad-color, .tu-verdad-color h1, .tu-verdad-color h2, .tu-verdad-color h3, .tu-verdad-color h4, .tu-verdad-color h5 {
+    color: #1a469d!important;
+}
+.tu-verdad-color h5:after {
+    background: #1a469d;
+}
+.tu-txt-gnrl .tu-tit-seccion h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    letter-spacing: 0.27em;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 60px;
+}
+.tu-txt-gnrl .tu-tit-seccion h5 .regular {
+    font-weight: normal;
+}
+.tu-txt-gnrl .tu-tit-seccion h5:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    height: 7px;
+    width: 73px;
+    
+}
+.tu-txt-gnrl h2 {
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 1.0952381;
+    padding-bottom: 34px;
+}
+.tu-txt-gnrl h3 {
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.0952381;
+    padding-bottom: 34px;
+    position: relative;
+}
+.tu-txt-gnrl h4 {
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.77777778;
+    letter-spacing: 0.15em;
+}
+/*==============
+Boton de compartir
+==============*/
+.tu-share-btns .vc_column-inner > .wpb_wrapper {
+    position: relative;
+    cursor: pointer;
+    
+    height: 18px;
+    display:inline-block;
+    min-width: 159px;
+}
+.tu-share-btns .nectar-social {
+    background: #f3f3f3;
+    position: absolute;
+    top: -12px;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    left: -8px;
+    padding: 10px 0;
+}
+.tu-share-btns .vc_column-inner > .wpb_wrapper:hover .nectar-social {
+    opacity: 1;
+}
+.tu-share-btns .wpb_text_column p {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.27em;
+}
+.tu-share-btns .wpb_text_column .icon-tiny {
+    font-size: 20px!important;
+}
+.tu-share-btns .nectar-social a, 
+.tu-share-btns .nectar-social a i {
+    line-height: 0.2!important;
+    height: 18px!important;
+    border: none;
+}
+.tu-share-btns .nectar-social a i {
+    font-size: 19px!important;
+}
+.tu-verdad-color .tu-share-btns .nectar-social a i {
+    color: #1a469d;
+}
+.tu-share-btns .nectar-social .count {
+    display: none!important;
+}
+.tu-share-btns .nectar-social a {
+    opacity: 0;
+}
+.tu-share-btns .vc_column-inner > .wpb_wrapper:hover .nectar-social a {
+    opacity: 1;
+}
+.tu-share-btns .nectar-social a:first-child {
+   -moz-transition: opacity 500ms ease 200ms;
+   -webkit-transition: opacity 500ms ease 200ms;
+   transition: opacity 500ms ease 200ms;
+}
+.tu-share-btns .nectar-social a:nth-child(2) {
+   -moz-transition: opacity 500ms ease 300ms;
+   -webkit-transition: opacity 500ms ease 300ms;
+   transition: opacity 500ms ease 300ms;
+}
+.tu-share-btns .nectar-social a:nth-child(3) {
+   -moz-transition: opacity 500ms ease 400ms;
+   -webkit-transition: opacity 500ms ease 400ms;
+   transition: opacity 500ms ease 400ms;
+}
+.tu-share-btns .nectar-social a:nth-child(4) {
+   -moz-transition: opacity 500ms ease 500ms;
+   -webkit-transition: opacity 500ms ease 500ms;
+   transition: opacity 500ms ease 500ms;
+}
+.tu-share-btns .nectar-social a i {
+    -moz-transition: transform 300ms ease;
+    -webkit-transition: transform 300ms ease;
+    transition: transform 300ms ease;
+}
+.tu-share-btns .nectar-social a:hover i{
+   -moz-transform: scale(1.2)!important;
+   -webkit-transform: scale(1.2)!important;
+   transform: scale(1.2)!important;
+}
+.tu-share-btns {
+    max-width: 160px;
+    float: right;
+    margin-top: -43px
+}
+.wpb_wrapper >div[id*="carousel-anything"] {
+    margin-bottom: 0;
+}
+/*==============
+Navegacion de carrusel
+==============*/
+.owl-ca-controls {
+   display: inline-block;
+}
+/*==============
+Slides
+==============*/
+.owl-ca-item {
+    overflow: auto;
+    max-height: calc(100vh - 400px);
+}
+.tu-carrusel {
+    margin-top:-10vh;
+}
+.tu-slide-final img{
+    padding-top:18vh!important;
+}
+/*==============
+MENUS ESPECIALES
+==============*/
+#tu-menu-mentira,
+#tu-menu-verdad {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top:0;
+}
+#tu-nav-contenedor-mentira,
+#tu-nav-contenedor-verdad {
+    position: fixed;
+    width: 33.33333%;
+    z-index: 10001;
+    height: 100%;
+    top: 0;
+    padding: 200px 0;
+}
+#tu-nav-contenedor-mentira {
+    background: rgba(145, 82, 74, 1);
+}
+#tu-nav-contenedor-verdad {
+    background: #1a469d;
+}
+#btn-mentira,
+#btn-verdad  {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 175px;
+    padding: 8px;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#btn-mentira {
+    background: url("http://www.appicua.com/app-sites/topus-uranus/wp-content/uploads/2018/02/franja-marron-h.png") center top no-repeat;
+    font-family: 'AndralisNDOsF', serif;
+    transform: rotate(90deg);
+    left: -100px;
+}
+#btn-verdad {
+    background: url("http://www.appicua.com/app-sites/topus-uranus/wp-content/uploads/2018/02/franja-azul-h.png") center top no-repeat;
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    transform: rotate(-90deg);
+    right: -100px;
+}
+#tu-menu-nav-mentira,
+#tu-menu-nav-verdad {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira .inner,
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad .inner {
+    padding-left: 0;
+    border: none
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira dt.level1 a span,
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad dt.level1 a span {
+    color: rgba(255,255,255,1);
+    font-size: 30px;
+    line-height: 1.4333333;
+    font-family: 'GT-Pressura-Regular', sans-serif;
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira dt.level1 a span:before,
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad dt.level1 a span:before {
+    content: "_";
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira .parent .notparent > .outer,
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad .parent .notparent > .outer {
+    padding-left: 43px;
+}
+
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira .parent .notparent a span,
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad .parent .notparent a span {
+    color: rgba(255,255,255,1);
+    font-size: 16px;
+    line-height: 1.625;
+    font-family: 'GT-Pressura-Regular', sans-serif;
+}
+#tu-menu-txt-mentira,
+#tu-menu-txt-verdad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    padding: 200px;
+    
+    color: #fff
+}
+#tu-menu-txt-mentira {
+    padding-right: calc(33.3333% + 200px);
+    background: rgba(145, 82, 74, 0.9);
+}
+#tu-menu-txt-verdad {
+    padding-left: calc(33.3333% + 200px);
+    background: rgba(26, 70, 157, 0.9);
+}
+#tu-menu-nav-mentira a[href="#no-disponible"] span,
+#tu-menu-nav-verdad a[href="#no-disponible"] span {
+    color: rgba(255,255,255,0.5)!important;
+}
+#tu-menu-nav-mentira a[href="#no-disponible"],
+#tu-menu-nav-verdad a[href="#no-disponible"] {
+    /*pointer-events: none!important;*/
+}
+#tu-menu-mentira  aside#text-5,
+#tu-menu-verdad  aside#text-4 {
+    font-size: 18px;
+    line-height: 1.555555556;
+}
+#tu-menu-mentira  aside#text-5 {
+    text-align: right;
+}
+#tu-menu-mentira  aside#text-7 {
+     text-align: right;
+}
+#tu-menu-mentira  aside#text-5 .textwidget,
+#tu-menu-mentira  aside#text-7 .textwidget {
+    max-width: 400px;
+    float: right;
+    clear: both;
+}
+#tu-menu-verdad  aside#text-4 .textwidget,
+#tu-menu-verdad  aside#text-8 .textwidget {
+    max-width: 400px;
+}
+#tu-menu-mentira  aside#text-5 strong,
+#tu-menu-verdad  aside#text-4 strong {
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+#tu-menu-mentira #btn-cerrar-mentira {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+#tu-menu-verdad #btn-cerrar-verdad {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+}
+/*Condiciones iniciales*/
+#tu-nav-contenedor-mentira {
+    right: -33.33333%;
+    transition: right 800ms ease 100ms;
+    /*cambia a right 0*/
+}
+.home #tu-nav-contenedor-mentira {
+    right: calc(-33.33333% - 30px);
+    /*cambia a right 0*/
+}
+#tu-nav-contenedor-verdad {
+    left: -33.33333%;
+    transition: left 800ms ease 100ms;
+    /*cambia a left 0*/
+}
+.home #tu-nav-contenedor-verdad {
+    left: calc(-33.33333% - 30px);
+    /*cambia a left 0*/
+}
+#tu-menu-mentira,
+#tu-menu-verdad {
+    display: none;
+    /*cambia a block*/
+}
+#text-7, #text-8 {
+    display:none;
+}
+/*Animacion de menu*/
+#tu-nav-contenedor-mentira.activo {
+    right: 0;
+    /*cambia a right 0*/
+}
+#tu-nav-contenedor-verdad.activo {
+    left: 0;
+    /*cambia a left 0*/
+}
+#tu-nav-contenedor-mentira.bajar-z,
+#tu-nav-contenedor-verdad.bajar-z{
+    z-index: 9999;
+}
