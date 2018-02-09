@@ -52,18 +52,19 @@ Version: 0.1
 /*Estilos tipograficos*/
 html, body {
     font-family: 'GT-Pressura-Regular', sans-serif;
-    font-size: 24px;
-    line-height: 1.3333333;
+    font-size: 18px;
+    line-height: 1.5;
     letter-spacing: 0.01em;
 }
 p {
    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased; 
+    font-smoothing: antialiased;
+    padding-bottom: 22px; 
 }
 html strong, body strong {
     font-family: 'GT-Pressura-Bold', sans-serif;
-    font-size: 24px;
-    line-height: 1.3333333;
+    font-size: 18px;
+    line-height: 1.35;
     letter-spacing: 0.01em;
 }
 /*==============
@@ -140,7 +141,25 @@ html #header-secondary-outer #social i {
 html #header-secondary-outer #social a:hover i {
     transform: scale(1.2);
 }
-
+#header-secondary-outer .sf-menu #menu-item-41 a {
+    position:relative;
+}
+#header-secondary-outer .sf-menu #menu-item-41 a:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color:#000000;
+    position:absolute;
+    bottom: 14px;
+    left: 86px;
+    -moz-transition: width 600ms ease;
+    -webkit-transition: width 600ms ease;
+    transition: width 600ms ease;
+}
+#header-secondary-outer .sf-menu #menu-item-41 a:hover:after {
+    width: 176px;
+}
 /*==============
 HEADER
 ==============*/
@@ -170,6 +189,11 @@ header#top nav >ul >li {
     width: 159px;
     color: transparent!important;
     font-size: 0!important;
+    height: 84px;
+    padding: 0!important;
+    background-repeat: no-repeat;
+    background-position: center top
+
 }
 
 #menu-item-45 a:after, #menu-item-46 a:after, #menu-item-47 a:after {
@@ -177,29 +201,23 @@ header#top nav >ul >li {
 }
 
 #menu-item-45 a {
-    background: url(../../../wp-content/uploads/2018/01/btn-colaborar.png) no-repeat center;
-}
-
-#menu-item-45 a:hover {
-    background: url(../../../wp-content/uploads/2018/01/btn-colaborar-h.png) no-repeat center;
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite.png);
 }
 
 #menu-item-46 a {
-    background: url(../../../wp-content/uploads/2018/01/btn-inscripciones.png) no-repeat center;
-}
-
-#menu-item-46 a:hover {
-    background: url(../../../wp-content/uploads/2018/01/btn-inscripciones-h.png) no-repeat center;
+    background-image: url(../../../wp-content/uploads/2018/02/btn-inscripcion-sprite.png);
 }
 
 #menu-item-47 a {
-    background: url(../../../wp-content/uploads/2018/01/btn-fisuras.png) no-repeat center;
+    background-image: url(../../../wp-content/uploads/2018/02/btn-figuras-sprite.png);
 }
 
-#menu-item-47 a:hover {
-    background: url(../../../wp-content/uploads/2018/01/btn-fisuras-h.png) no-repeat center;
+#menu-item-45 a:hover, #menu-item-46 a:hover, #menu-item-47 a:hover {
+    background-position: center bottom;
 }
-
+header#top #menu-item-45 a, header#top #menu-item-46 a, header#top #menu-item-47 a {
+    margin-left: 18px!important;
+}
 /*==============
 HOME
 ==============*/
@@ -213,7 +231,7 @@ HOME
     font-size: 177px;
     line-height: 1.18644;
     text-transform: uppercase;
-    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-family: 'GT-Pressura-Bold', sans-serif;
     font-weight: bold;
     color: #1a469d;
     position: relative;
@@ -292,7 +310,34 @@ HOME
 a.column-link:hover + .vc_column-inner .tu-silaba:before {
     width: 100%;
 }
-
+.home .vc_column-inner .svg-icon-holder {
+    position:relative;
+    transition: all 500ms ease 300ms;
+}
+.home .vc_column-inner .svg-icon-holder:before {
+    content: "";
+    position:absolute;
+    height: 2px;
+    width: 300px;
+    top: 50%;
+    margin-top: -1px;
+}
+.home .tu-verdad .vc_column-inner .svg-icon-holder:before {
+    background: #5271b3;
+    left: 50%;
+}
+.home .tu-mentira .vc_column-inner .svg-icon-holder:before {
+    background: #aa7974;
+    right: 50%;
+}
+.home .tu-verdad a.column-link:hover + .vc_column-inner .svg-icon-holder {
+    width: 250px!important;
+    margin-left: -200px;
+}
+.home .tu-mentira a.column-link:hover + .vc_column-inner .svg-icon-holder {
+    width: 250px!important;
+    margin-right: -200px;
+}
 .home h2 .tu-silaba:first-child:before {
     -moz-transition: width 800ms ease;
     -webkit-transition: width 800ms ease;
@@ -347,7 +392,7 @@ TEXTOS
     font-weight: bold;
     font-size: 24px;
     line-height: 1.0952381;
-    padding-bottom: 34px;
+    padding-bottom: 37px;
     position: relative;
 }
 .tu-txt-gnrl h4 {
@@ -356,6 +401,9 @@ TEXTOS
     font-size: 18px;
     line-height: 1.77777778;
     letter-spacing: 0.15em;
+}
+.tu-mg-subtitulo {
+    padding-bottom: 40px;
 }
 /*==============
 Boton de compartir
@@ -441,9 +489,9 @@ Boton de compartir
    transform: scale(1.2)!important;
 }
 .tu-share-btns {
-    max-width: 160px;
+    max-width: 140px;
     float: right;
-    margin-top: -43px
+    margin-top: -38px
 }
 .wpb_wrapper >div[id*="carousel-anything"] {
     margin-bottom: 0;
@@ -466,6 +514,11 @@ Slides
 }
 .tu-slide-final img{
     padding-top:18vh!important;
+}
+.owl-ca-theme .owl-ca-controls .owl-ca-page span {
+    height: 9px;
+    width: 9px;
+    margin: 5px 10px;
 }
 /*==============
 MENUS ESPECIALES
@@ -564,11 +617,11 @@ MENUS ESPECIALES
 }
 #tu-menu-txt-mentira {
     padding-right: calc(33.3333% + 200px);
-    background: rgba(145, 82, 74, 0.9);
+    background: rgba(145, 82, 74, 0.95);
 }
 #tu-menu-txt-verdad {
     padding-left: calc(33.3333% + 200px);
-    background: rgba(26, 70, 157, 0.9);
+    background: rgba(26, 70, 157, 0.95);
 }
 #tu-menu-nav-mentira a[href="#no-disponible"] span,
 #tu-menu-nav-verdad a[href="#no-disponible"] span {
@@ -618,7 +671,7 @@ MENUS ESPECIALES
 /*Condiciones iniciales*/
 #tu-nav-contenedor-mentira {
     right: -33.33333%;
-    transition: right 800ms ease 100ms;
+    transition: right 1400ms cubic-bezier(.23,1,.32,1) 100ms;
     /*cambia a right 0*/
 }
 .home #tu-nav-contenedor-mentira {
@@ -627,7 +680,7 @@ MENUS ESPECIALES
 }
 #tu-nav-contenedor-verdad {
     left: -33.33333%;
-    transition: left 800ms ease 100ms;
+    transition: left 1400ms cubic-bezier(.23,1,.32,1) 100ms;
     /*cambia a left 0*/
 }
 .home #tu-nav-contenedor-verdad {
@@ -654,4 +707,45 @@ MENUS ESPECIALES
 #tu-nav-contenedor-mentira.bajar-z,
 #tu-nav-contenedor-verdad.bajar-z{
     z-index: 9999;
+}
+.btn-colaborar {
+    width: 159px;
+    height: 84px;
+}
+#tu-menu-txt-verdad .btn-colaborar {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
+    background-position: center top;
+}
+#tu-menu-txt-verdad .btn-colaborar:hover {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
+    background-position: center bottom;
+}
+#tu-menu-txt-mentira .btn-colaborar {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
+    background-position: center top;
+    margin-left: auto;
+}
+#tu-menu-txt-mentira .btn-colaborar:hover {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
+    background-position: center bottom;
+}
+/*
+==============
+RETINA COSAS
+==============
+*/
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+   #menu-item-45 a {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite@2x.png);
+}
+
+#menu-item-46 a {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-inscripcion-sprite@2x.png);
+}
+
+#menu-item-47 a {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-figuras-sprite@2x.png);
+}
 }
