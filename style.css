@@ -827,9 +827,9 @@ CON PROLOGO
 ==============
 */
 /*Agregar esta clase cuando se desplegue*/
-/*#header-outer, #header-secondary-outer,#tu-nav-contenedor-mentira, #tu-nav-contenedor-verdad {
+#header-outer.z-bajar, #header-secondary-outer.z-bajar,#tu-nav-contenedor-mentira.z-bajar, #tu-nav-contenedor-verdad.z-bajar {
     z-index: 1!important;
-}*/
+}
 .page-template-page-sidebar #footer-outer {
     display: none;
 }
@@ -848,25 +848,48 @@ CON PROLOGO
    width: 180px
 }
 /*Primer prologo*/
-.page-template-page-sidebar #sidebar #custom_html-3 {
+.page-template-page-sidebar #sidebar #tu-fondo-prologo {
     position: fixed;
-    width: 60%;
-    max-width: 880px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 70, 157, 0.95);
+    z-index:2;
+    cursor: url(http://www.appicua.com/app-sites/topus-uranus/wp-content/uploads/2018/02/btn-cerrar.png), crosshair;
+    display:none;
+
+}
+.page-template-page-sidebar #sidebar #custom_html-3,
+.page-template-page-sidebar #sidebar #custom_html-4,
+.page-template-page-sidebar #sidebar #custom_html-5 {
+    position: fixed;
+    width: 880px;
     height: 100%;
-    background:#d4d1d1;
+    background:#f3f3f3;
     padding: 130px;
     margin:0!important;
     top:0;
     bottom:0;
+    z-index: 3;
 }
-.page-template-page-sidebar #sidebar #custom_html-3 {
-    left: 100%;
+.page-template-page-sidebar #sidebar #custom_html-3,
+.page-template-page-sidebar #sidebar #custom_html-4,
+.page-template-page-sidebar #sidebar #custom_html-5 {
+    right: -880px;
+    transition: right 1100ms ease;
 }
-.page-template-page-sidebar #sidebar #custom_html-3.activo {
-    left: initial;
+.page-template-page-sidebar #sidebar #custom_html-3.activo,
+.page-template-page-sidebar #sidebar #custom_html-4.activo,
+.page-template-page-sidebar #sidebar #custom_html-5.activo {
     right: 0;
 }
-
+.page-template-page-sidebar #sidebar #custom_html-3 .full-width-section,
+.page-template-page-sidebar #sidebar #custom_html-4 .full-width-section,
+.page-template-page-sidebar #sidebar #custom_html-5 .full-width-section {
+    padding:0!important;
+    margin:0!important;
+}
 .page-template-page-sidebar #sidebar #custom_html-2 h3 {
     font-family: 'GT-Pressura-Bold', sans-serif;
     width: 133px;
