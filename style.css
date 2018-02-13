@@ -123,7 +123,7 @@ body[data-header-color="custom"]:not(.material) #header-secondary-outer nav >ul 
     margin-left: 23px;
 }
 
-#header-secondary-outer .sf-menu a::before {
+#header-secondary-outer .sf-menu a:before {
     content: "";
     display: block;
     width: 69px;
@@ -132,8 +132,13 @@ body[data-header-color="custom"]:not(.material) #header-secondary-outer nav >ul 
     position: absolute;
     left: 0;
     top: 18px;
+    -moz-transition: width 600ms ease;
+    -webkit-transition: width 600ms ease;
+    transition: width 600ms ease;
 }
-
+#header-secondary-outer .sf-menu a:hover:before {
+    width: 100%;
+}
 html #header-secondary-outer #social i {
     font-size: 18px!important;
 }
@@ -144,7 +149,7 @@ html #header-secondary-outer #social a:hover i {
 #header-secondary-outer .sf-menu #menu-item-41 a {
     position:relative;
 }
-#header-secondary-outer .sf-menu #menu-item-41 a:after {
+/*#header-secondary-outer .sf-menu #menu-item-41 a:after {
     content: "";
     display: block;
     height: 1px;
@@ -153,13 +158,11 @@ html #header-secondary-outer #social a:hover i {
     position:absolute;
     bottom: 14px;
     left: 86px;
-    -moz-transition: width 600ms ease;
-    -webkit-transition: width 600ms ease;
-    transition: width 600ms ease;
+    
 }
 #header-secondary-outer .sf-menu #menu-item-41 a:hover:after {
     width: 176px;
-}
+}*/
 /*==============
 HEADER
 ==============*/
@@ -173,7 +176,7 @@ header#top nav >ul >li {
     float: left;
 }
 
-#menu-item-45 , #menu-item-46 , #menu-item-47 {
+#menu-item-197 , #menu-item-46 , #menu-item-47 {
     float: right!important;
 }
 
@@ -185,7 +188,7 @@ header#top nav >ul >li {
     width: 100%;
 }
 
-#menu-item-45 a, #menu-item-46 a, #menu-item-47 a {
+#menu-item-197 a, #menu-item-46 a, #menu-item-47 a {
     width: 159px;
     color: transparent!important;
     font-size: 0!important;
@@ -196,11 +199,11 @@ header#top nav >ul >li {
 
 }
 
-#menu-item-45 a:after, #menu-item-46 a:after, #menu-item-47 a:after {
+#menu-item-197 a:after, #menu-item-46 a:after, #menu-item-47 a:after {
     display: none!important;
 }
 
-#menu-item-45 a {
+#menu-item-197 a {
     background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite.png);
 }
 
@@ -212,10 +215,10 @@ header#top nav >ul >li {
     background-image: url(../../../wp-content/uploads/2018/02/btn-figuras-sprite.png);
 }
 
-#menu-item-45 a:hover, #menu-item-46 a:hover, #menu-item-47 a:hover {
+#menu-item-197 a:hover, #menu-item-46 a:hover, #menu-item-47 a:hover, #menu-item-197.current_page_item a {
     background-position: center bottom;
 }
-header#top #menu-item-45 a, header#top #menu-item-46 a, header#top #menu-item-47 a {
+header#top #menu-item-197 a, header#top #menu-item-46 a, header#top #menu-item-47 a {
     margin-left: 18px!important;
 }
 /*==============
@@ -401,6 +404,7 @@ TEXTOS
     font-size: 18px;
     line-height: 1.77777778;
     letter-spacing: 0.15em;
+    text-decoration: underline;
 }
 .tu-mg-subtitulo {
     padding-bottom: 40px;
@@ -507,7 +511,7 @@ Slides
 ==============*/
 .owl-ca-item {
     overflow: auto;
-    max-height: calc(100vh - 400px);
+    /*max-height: calc(100vh - 400px);*/
 }
 .tu-carrusel {
     margin-top:-10vh;
@@ -519,6 +523,26 @@ Slides
     height: 9px;
     width: 9px;
     margin: 5px 10px;
+}
+/*Botones al final de slides*/
+.btn-colaborar-reg {
+    width: 159px;
+    height: 84px;
+}
+.btn-colaborar-rg {
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite.png);
+    background-position: center top;
+    width: 159px;
+    height: 84px;
+    display: block;
+    color: transparent;
+    font-size: 0;
+    margin: 0 auto 0;
+    margin-top: 25%;
+}
+.btn-colaborar-rg:hover {
+   background-position: bottom;
+    
 }
 /*==============
 MENUS ESPECIALES
@@ -546,6 +570,23 @@ MENUS ESPECIALES
 #tu-nav-contenedor-verdad {
     background: #1a469d;
 }
+#tu-nav-contenedor-verdad{
+    padding-left: 8%;
+}
+#tu-nav-contenedor-verdad .widget-title {
+    font-family: 'GT-Pressura-Regular', sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+#tu-nav-contenedor-mentira .widget-title {
+    font-family: 'AndralisNDOsF', serif;
+    font-size: 46px;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 1.5em;
+}
 #btn-mentira,
 #btn-verdad  {
     color: #fff;
@@ -553,7 +594,6 @@ MENUS ESPECIALES
     top: 50%;
     text-align: center;
     width: 175px;
-    padding: 8px;
     font-size: 14px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
@@ -564,12 +604,14 @@ MENUS ESPECIALES
     font-family: 'AndralisNDOsF', serif;
     transform: rotate(90deg);
     left: -100px;
+    padding: 9px 8px 7px;
 }
 #btn-verdad {
     background: url("http://www.appicua.com/app-sites/topus-uranus/wp-content/uploads/2018/02/franja-azul-h.png") center top no-repeat;
     font-family: 'GT-Pressura-Bold', sans-serif;
     transform: rotate(-90deg);
     right: -100px;
+    padding: 8px;
 }
 #tu-menu-nav-mentira,
 #tu-menu-nav-verdad {
@@ -579,14 +621,21 @@ MENUS ESPECIALES
 #tu-nav-contenedor-mentira #tu-menu-nav-mentira .inner,
 #tu-nav-contenedor-verdad #tu-menu-nav-verdad .inner {
     padding-left: 0;
-    border: none
+    border: none;
+    background:none;
 }
-#tu-nav-contenedor-mentira #tu-menu-nav-mentira dt.level1 a span,
+
 #tu-nav-contenedor-verdad #tu-menu-nav-verdad dt.level1 a span {
     color: rgba(255,255,255,1);
     font-size: 30px;
     line-height: 1.4333333;
     font-family: 'GT-Pressura-Regular', sans-serif;
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira dt.level1 a span {
+    color: rgba(255,255,255,1);
+    font-size: 32px;
+    line-height: 1.34375;
+    font-family: 'AndralisNDOsF', serif;
 }
 #tu-nav-contenedor-mentira #tu-menu-nav-mentira dt.level1 a span:before,
 #tu-nav-contenedor-verdad #tu-menu-nav-verdad dt.level1 a span:before {
@@ -597,12 +646,21 @@ MENUS ESPECIALES
     padding-left: 43px;
 }
 
-#tu-nav-contenedor-mentira #tu-menu-nav-mentira .parent .notparent a span,
+
 #tu-nav-contenedor-verdad #tu-menu-nav-verdad .parent .notparent a span {
     color: rgba(255,255,255,1);
     font-size: 16px;
     line-height: 1.625;
     font-family: 'GT-Pressura-Regular', sans-serif;
+}
+#tu-nav-contenedor-verdad #tu-menu-nav-verdad .parent .notparent.active a span {
+    text-decoration: line-through;
+}
+#tu-nav-contenedor-mentira #tu-menu-nav-mentira .parent .notparent a span {
+    color: rgba(255,255,255,1);
+    font-size: 16px;
+    line-height: 1.625;
+    font-family: 'AndralisNDOsF', serif;
 }
 #tu-menu-txt-mentira,
 #tu-menu-txt-verdad {
@@ -611,52 +669,45 @@ MENUS ESPECIALES
     height: 100%;
     top:0;
     left: 0;
-    padding: 200px;
-    
+    padding-top: 200px;
     color: #fff
 }
 #tu-menu-txt-mentira {
-    padding-right: calc(33.3333% + 200px);
+    padding-right: 41.3333%;
     background: rgba(145, 82, 74, 0.95);
 }
 #tu-menu-txt-verdad {
-    padding-left: calc(33.3333% + 200px);
+    padding-left: 41.3333%;
     background: rgba(26, 70, 157, 0.95);
 }
 #tu-menu-nav-mentira a[href="#no-disponible"] span,
 #tu-menu-nav-verdad a[href="#no-disponible"] span {
     color: rgba(255,255,255,0.5)!important;
 }
-#tu-menu-nav-mentira a[href="#no-disponible"],
-#tu-menu-nav-verdad a[href="#no-disponible"] {
-    /*pointer-events: none!important;*/
-}
-#tu-menu-mentira  aside#text-5,
+
 #tu-menu-verdad  aside#text-4 {
     font-size: 18px;
-    line-height: 1.555555556;
+    line-height: 1.555555555;
 }
 #tu-menu-mentira  aside#text-5 {
+    font-family: 'AndralisNDOsF', serif;
+    font-size: 19px;
+    line-height: 1.47368421;
     text-align: right;
 }
+
 #tu-menu-mentira  aside#text-7 {
      text-align: right;
 }
-#tu-menu-mentira  aside#text-5 .textwidget,
-#tu-menu-mentira  aside#text-7 .textwidget {
-    max-width: 400px;
-    float: right;
-    clear: both;
-}
-#tu-menu-verdad  aside#text-4 .textwidget,
-#tu-menu-verdad  aside#text-8 .textwidget {
-    max-width: 400px;
-}
-#tu-menu-mentira  aside#text-5 strong,
 #tu-menu-verdad  aside#text-4 strong {
     font-family: 'GT-Pressura-Regular', sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
+}
+#tu-menu-mentira  aside#text-5 strong {
+    font-family: 'AndralisNDOsF', serif;
+    font-weight: normal;
+    font-size: 14px;
 }
 #tu-menu-mentira #btn-cerrar-mentira {
     position: absolute;
@@ -713,11 +764,10 @@ MENUS ESPECIALES
     height: 84px;
 }
 #tu-menu-txt-verdad .btn-colaborar {
-    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
+    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-v.png);
     background-position: center top;
 }
 #tu-menu-txt-verdad .btn-colaborar:hover {
-    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
     background-position: center bottom;
 }
 #tu-menu-txt-mentira .btn-colaborar {
@@ -726,8 +776,143 @@ MENUS ESPECIALES
     margin-left: auto;
 }
 #tu-menu-txt-mentira .btn-colaborar:hover {
-    background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite-m.png);
     background-position: center bottom;
+}
+#tu-menu-txt-mentira, #tu-menu-txt-verdad {
+    cursor: url(http://www.appicua.com/app-sites/topus-uranus/wp-content/uploads/2018/02/btn-cerrar.png), crosshair;
+}
+#tu-nav-contenedor-mentira:not(.activo):hover {
+    right: -32.3%!important;
+    transition: right 300ms linear;
+}
+#tu-nav-contenedor-verdad:not(.activo):hover {
+    left: -32.3%!important;
+    transition: left 300ms linear;
+}
+/*==============
+COLABORAR
+==============*/
+.page-id-189 #menu-item-46,
+.page-id-189 #menu-item-47 {
+    display: none;
+}
+.tu-colaborar-opciones .vc_col-sm-6 {
+    padding: 60px;
+}
+.tu-colaborar-opciones .vc_col-sm-6:first-child {
+    position: relative;
+    
+}
+.tu-colaborar-opciones .vc_col-sm-6:first-child .vc_column-inner:after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 60px;
+    bottom:60px;
+    right: -2.5%;
+    width: 1px;
+    background-color: #000;
+    
+}
+/*==============
+BOTON
+==============*/
+.nectar-button {
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    font-weight: bold;
+}
+/*
+==============
+CON PROLOGO
+==============
+*/
+/*Agregar esta clase cuando se desplegue*/
+/*#header-outer, #header-secondary-outer,#tu-nav-contenedor-mentira, #tu-nav-contenedor-verdad {
+    z-index: 1!important;
+}*/
+.page-template-page-sidebar #footer-outer {
+    display: none;
+}
+.page-template-page-sidebar .post-area {
+    width: 100%;
+}
+.page-template-page-sidebar #sidebar {
+   position: fixed;
+   right: 0; 
+   
+   top: 0;
+   bottom:0;
+   height: 100%;
+   z-index:1000000;
+   float:initial;
+   width: 180px
+}
+/*Primer prologo*/
+.page-template-page-sidebar #sidebar #custom_html-3 {
+    position: fixed;
+    width: 60%;
+    max-width: 880px;
+    height: 100%;
+    background:#d4d1d1;
+    padding: 130px;
+    margin:0!important;
+    top:0;
+    bottom:0;
+}
+.page-template-page-sidebar #sidebar #custom_html-3 {
+    left: 100%;
+}
+.page-template-page-sidebar #sidebar #custom_html-3.activo {
+    left: initial;
+    right: 0;
+}
+
+.page-template-page-sidebar #sidebar #custom_html-2 h3 {
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    width: 133px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.27em;
+    border-radius: 4px;
+    margin-top: 20vh;
+    border: 2px solid #1a469d;
+    color: #1a469d;
+    background: #f3f3f3;
+    transition: all 200ms ease;
+}
+.page-template-page-sidebar #sidebar #custom_html-2 a {
+    font-size: 16px;
+    font-family: 'GT-Pressura-Bold', sans-serif;
+    color: rgba(26, 70, 157, 0.5);
+    max-width: 133px;
+    display:block;
+    padding: 22px 0;
+    position:relative;
+    left: 180px;
+    transition: left 500ms ease, color 200ms ease;
+}
+.page-template-page-sidebar #sidebar #custom_html-2 a:hover {
+    color: rgba(26, 70, 157, 1);
+}
+.page-template-page-sidebar #sidebar #custom_html-2:hover a {
+    left: 0;
+}
+.page-template-page-sidebar #sidebar #custom_html-2:hover h3 {
+    background-color: #1a469d;
+    color: #f3f3f3;
+}
+.page-template-page-sidebar #sidebar #custom_html-2 a::before {
+    content:"";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: rgba(26, 70, 157, 0.5);
+    position: absolute;
+    top:0;
+}
+.page-template-page-sidebar #sidebar #custom_html-2 a:nth-child(2):before {
+    display:none;
 }
 /*
 ==============
@@ -737,7 +922,7 @@ RETINA COSAS
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
-   #menu-item-45 a {
+   #menu-item-197 a {
     background-image: url(../../../wp-content/uploads/2018/02/btn-colaborar-sprite@2x.png);
 }
 
